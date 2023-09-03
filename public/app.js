@@ -25,6 +25,20 @@ function handlecellclick(e){
     if(gameboard[cellindex] ==='' && gameactive){
         gameboard[cellindex] = currentPlayer;
         cell.textContent = currentPlayer;
+        cell.style.color = currentPlayer ==='X' ? '#007bff' : '#ff6b6b';
+        toggleplayer();
+        checkwinner();
+    }
+}
+
+function toggleplayer(){
+    currentPlayer = currentPlayer ==='X'?'O':'X';
+}
+
+function checkwinner(){
+    for(const combo of winningcombos){
+        const [a,b,c] = combo;
+        if(gameboard[a] && gameboard[a]===)
     }
 }
 
