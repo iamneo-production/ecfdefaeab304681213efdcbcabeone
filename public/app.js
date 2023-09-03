@@ -1,11 +1,13 @@
 // Initial game state
 const board = document.getElementById('board');
-const cells = document.getElementById('board');
-let cells = ['', '', '', '', '', '', '', '', ''];
+const cells = document.querySelectorAll('[data-cell]');
+const restartbutton = document.getElementById('restart-button');
+let gameboard = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
-let result = document.querySelector('.result');
-let btns = document.querySelectorAll('.btn');
-let conditions = [
+//let result = document.querySelector('.result');
+//let btns = document.querySelectorAll('.btn');
+let gameactive = true;
+let winningcombos = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -16,8 +18,22 @@ let conditions = [
     [2, 4, 6]
 ];
 
+function handlecellclick(e){
+    const cell = e.target;
+    const cellindex = [...cells].indexOf(cell);
+
+    if(gameboard[cellindex] ==='' && gameactive){
+        gameboard[cellindex] = currentPlayer;
+        cell.textContent = currentPlayer;
+    }
+}
+
+
+
+
+
 // Function to handle player moves
-const ticTacToe = (element, index) => {
+//const ticTacToe = (element, index) => {
     // Your game logic here
 
     /*
