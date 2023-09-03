@@ -4,28 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tic_tac_toe</title>
-
-  <!-- link the style.css and app.js files -->
-  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 <body>
-  <h1>Tic Tac Toe</h1>
-  <!-- Enter your code here -->
-  <div class="container">
-    <div class="board" id="board">
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
+  <div class="box">
+    <h1 id="header">Tic Tac Toe</h1>
+    <br>
+    <div class="row">
+      <input type="button" class="btn" readonly>
+      <input type="button" class="btn" readonly>
+      <input type="button" class="btn" readonly>
     </div>
-    <button id="restart-button">Restart</button>
+    <div class="row">
+      <input type="button" class="btn" readonly>
+      <input type="button" class="btn" readonly>
+      <input type="button" class="btn" readonly>
+    </div>
+    <div class="row">
+      <input type="button" class="btn" readonly>
+      <input type="button" class="btn" readonly>
+      <input type="button" class="btn" readonly>
+    </div>
   </div>
-  <script src="app.js"></script>
+
+  
+
+  <div class="result-container">
+    <p class="result">Player X Turn</p>
+  </div>
+
+  <div class="reset">
+    <button id="reset" class="reset-button" disabled>Reset</button>
+  </div>
+
+  <script src="script.js"></script> 
 </body>
 </html>

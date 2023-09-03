@@ -13,50 +13,92 @@ body {
   
 /* Enter your styling here */
 
-.container{
-  display: inline-block;
-  margin-top: 20px;
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 50px;
 }
 
-h1{
-  font-size: 36px;
-}
-
-.board{
-  display: grid;
-  grid-template-columns: repeat(3,100px);
-  grid-gap: 5px;
-  background-color: #333;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.cell{
-  width: 100px;
-  height: 100px;
-  background-color: aliceblue;
+/* Box Styling */
+.box {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  margin: 35px;
+}
+
+/* Row Styling */
+.row {
+  display: flex;
   justify-content: center;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.cell:hover{
-  background-color: #ddd;
-}
-
-button{
-  margin-top: 10px;
-  font-size: 18px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+}/* Reduce the gap between cells (buttons) */
+/* Adjust the background color to make cells whiter */
+.btn {
+  border: 0px solid #fff;
   border-radius: 5px;
+  width: 75px;
+  height: 75px;
+  font-size: 50px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.7); /* Increase opacity for a whiter background */
+  color: #333;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 3px; /* Smaller gap between cells */
+  padding: 0; /* Remove padding to maintain cell size */
+}
+
+
+
+/* Button Hover Styling */
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
 }
 
-button:hover{
-  background-color: #0056b3 ;
+/* Disabled Button Styling */
+.btn:disabled {
+  color: black;
+  cursor: not-allowed;
+}
+
+/* Result Container Styling */
+.result {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #fff;
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Result Styling */
+.result p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+}
+
+/* Reset Styling */
+.reset {
+  text-align: center;
+}
+
+/* Reset Button Styling */
+.reset-button {
+  border: 0px solid black;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Reset Button Hover Styling */
+.reset-button:hover {
+  background-color: black;
+  color: white;
 }
