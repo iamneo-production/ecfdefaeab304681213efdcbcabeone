@@ -72,9 +72,14 @@ function restartgame(){
         cell.textContent = '';
         cell.style.backgroundColor = '#fff';
     });
-    const resultelement = document.querySelector('.result')
-
+    const resultelement = document.querySelector('.result');
+    if(resultelement){
+        resultelement.remove();
+    }
 }
+
+cells.forEach(cell=>cell.addEventListener('click',handlecellclick));
+restartbutton.addEventListener('click',restartgame);
 
 
 
@@ -100,7 +105,7 @@ function restartgame(){
 
     // Your code to handle button and cell interactions
     // ...
-};
+//};
 
     /*
     **Part 2: Reset Function (Add your code here)**
@@ -112,7 +117,7 @@ function restartgame(){
     */
 
 // Function to reset the game
-const resetGame = () => {
+//const resetGame = () => {
     // Your code to reset the game state
     // ...
 
@@ -121,10 +126,10 @@ const resetGame = () => {
 
     // Your code to re-enable buttons
     // ...
-};
+//};
 
-btns.forEach((btn, i) => {
-    btn.addEventListener('click', () => ticTacToe(btn, i));
-});
+//btns.forEach((btn, i) => {
+//    btn.addEventListener('click', () => ticTacToe(btn, i));
+//});
 
-document.querySelector('#reset').addEventListener('click', resetGame);
+//document.querySelector('#reset').addEventListener('click', resetGame);
