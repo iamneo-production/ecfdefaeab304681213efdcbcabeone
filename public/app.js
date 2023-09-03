@@ -56,8 +56,24 @@ function displaywinner(winner){
     const resultelement = document.createElement('div');
     resultelement.classList.add('result');
     if(winner==='Draw'){
-        resultelement
+        resultelement.textContent = 'It\'s a Draw';
     }
+    else{
+        resultelement.textContent = '${winner} wins!';
+    }
+    board.appendChild(resultelement);
+}
+
+function restartgame(){
+    gameboard = ['', '', '', '', '', '', '', '', ''];
+    let gameactive = true;
+    let currentPlayer = 'X';
+    cells.forEach(cell=>{
+        cell.textContent = '';
+        cell.style.backgroundColor = '#fff';
+    });
+    const resultelement = document.querySelector('.result')
+
 }
 
 
