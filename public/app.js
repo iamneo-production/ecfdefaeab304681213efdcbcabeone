@@ -1,4 +1,6 @@
 // Initial game state
+const board = document.getElementById('board');
+const cells = document.getElementById('board');
 let cells = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let result = document.querySelector('.result');
