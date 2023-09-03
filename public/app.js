@@ -38,7 +38,25 @@ function toggleplayer(){
 function checkwinner(){
     for(const combo of winningcombos){
         const [a,b,c] = combo;
-        if(gameboard[a] && gameboard[a]===)
+        if(gameboard[a] && gameboard[a]===gameboard[b] && gameboard[a]===gameboard[c]){
+            gameactive = false;
+            cells[a].style.backgroundColor = '#4caf50';
+            cells[b].style.backgroundColor = '#4caf50';
+            cells[c].style.backgroundColor = '#4caf50';
+            displaywinner(gameboard[a]);
+        }
+    }
+    if(!gameboard.includes('') && gameactive){
+        gameactive = false;
+        displaywinner('Draw');
+    }
+}
+
+function displaywinner(winner){
+    const resultelement = document.createElement('div');
+    resultelement.classList.add('result');
+    if(winner==='Draw'){
+        resultelement
     }
 }
 
